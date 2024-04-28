@@ -89,6 +89,10 @@ const likeClick = (item) => {
         display: inline-block;
         vertical-align: middle;
         padding: 0 10px;
+        max-width: 370px;
+        white-space: nowrap; /* 强制文本在一行内显示，不换行 */
+        overflow: hidden; /* 隐藏超出容器宽度的部分文本 */
+        text-overflow: ellipsis; /* 显示省略号 */
       }
       .avatar-wrapper {
         img {
