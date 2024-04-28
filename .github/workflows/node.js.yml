@@ -1,32 +1,46 @@
-name: Deploy to GitHub Pages
+name: homepage deploy pipline
 
 on:
   push:
-    branches:
-      - main  # 你要部署的分支，这里以 main 分支为例
+    tags:
+      - '*'
+    branches: [ main ]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{github.repository}}
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
+    concurrency:
+      group: ${{github.workflow}} - ${{github.ref}}
+    
     steps:
-      - name: Checkout code
+      - name: checkout
         uses: actions/checkout@v2
-
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: setup hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.92.0'
+          extended: true
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22.0.0'  # 设置 Node.js 版本，根据你的项目需要调整
+          node-version: '22.0.0'
+        
+      - name: install
+        run: npm install 
 
-      - name: Install dependencies
-        run: npm install  # 安装项目依赖
+      - name: build
+        run: npm build 
 
-      - name: Build project
-        run: npm run build  # 执行 npm run build 构建项目
-
-      - name: Deploy to GitHub Pages
+      - name: deploy
         uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # 指定要部署的目录，这里是 Vue 项目的 dist 目录
-          cname: zhangyingwei.com  # 可选，自定义域名，根据需要修改
+        if: ${{github.ref == 'refs/heads/main'}}
+        with: 
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: ./dist
