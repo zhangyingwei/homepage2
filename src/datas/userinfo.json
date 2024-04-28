@@ -1,0 +1,22 @@
+{
+  "name": "张英伟",
+  "subtitle": "程序猿 / 技术管理 / 独立开发者",
+  "concats": [
+    {
+      "name": "Email",
+      "url": "mailto:zhangyw001@gmail.com",
+      "text": "zhangyw001@gmail.com",
+      "icon": "mail-outline"
+    },
+    {
+      "name": "微信",
+      "text": "fengche361",
+      "icon": "logo-github"
+    },
+    {
+      "name": "地理位置",
+      "text": "北京",
+      "icon": "location-outline"
+    }
+  ]
+}

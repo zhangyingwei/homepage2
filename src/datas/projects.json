@@ -1,0 +1,50 @@
+[
+  {
+    "title": "ChatGPT 套壳工具",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281402009.png",
+    "url": "https://fasshub.com/"
+  },
+  {
+    "title": "专注了吗",
+    "category": "小程序",
+    "img": "https://hushuo.zhangyingwei.com/202404281400292.png",
+    "url": "https://miniapp.fascloud.org/"
+  },
+  {
+    "title": "Treehole-Jekyll 博客",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281425343.png",
+    "url": "https://github.com/microgoople/treehole-jekyll"
+  },
+  {
+    "title": "Solid Web模板引擎",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281448079.png",
+    "url": "https://github.com/zhangyingwei/Solid"
+  },
+  {
+    "title": "Ultraman-Rpc 简易RPC框架",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281451161.png",
+    "url": "https://github.com/zhangyingwei/ultraman-rpc"
+  },
+  {
+    "title": "Cockroach2 爬虫框架",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281455994.png",
+    "url": "https://blog.zhangyingwei.com/cockroach/#/"
+  },
+  {
+    "title": "FasCloud 云函数开发平台",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281505619.png",
+    "url": "#"
+  },
+  {
+    "title": "ExploreSerp 搜索引擎API接口",
+    "category": "Java 项目",
+    "img": "https://hushuo.zhangyingwei.com/202404281533011.png",
+    "url": "https://exploreserp.app/"
+  }
+]
