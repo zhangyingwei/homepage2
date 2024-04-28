@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 你要部署的分支，这里以 main 分支为例
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # 设置 Node.js 版本，根据你的项目需要调整
+
+      - name: Install dependencies
+        run: npm install  # 安装项目依赖
+
+      - name: Build project
+        run: npm run build  # 执行 npm run build 构建项目
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # 指定要部署的目录，这里是 Vue 项目的 dist 目录
+          cname: zhangyingwei.com  # 可选，自定义域名，根据需要修改
