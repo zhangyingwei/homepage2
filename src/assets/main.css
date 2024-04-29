@@ -1313,6 +1313,16 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
+.tags-wrapper .tag-item .tag-content .content {
+  max-width: 780px;
+}
+/* 
+.service-icon-box {
+  position: relative;
+  right: 0;
+  top: 0px;
+} */
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1337,6 +1347,22 @@ textarea.form-input::-webkit-resizer {
   .project-img,
   .blog-banner-box {
     height: auto;
+  }
+
+  .tags-wrapper .tag-item .tag-content .content {
+    max-width: 370px;
+  }
+
+  .service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .service-icon-box {
+    top: 4px;
   }
 }
 
@@ -1664,6 +1690,10 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
+
+  .tags-wrapper .tag-item .tag-content .content {
+    max-width: 400px;
+  }
 }
 
 /**
@@ -1769,6 +1799,10 @@ textarea.form-input::-webkit-resizer {
   .form-btn {
     width: max-content;
     margin-left: auto;
+  }
+
+  .tags-wrapper .tag-item .tag-content .content {
+    max-width: 580px;
   }
 }
 
@@ -1877,6 +1911,10 @@ textarea.form-input::-webkit-resizer {
 
   .blog-banner-box {
     height: 230px;
+  }
+
+  .tags-wrapper .tag-item .tag-content .content {
+    max-width: 840px;
   }
 }
 
@@ -2016,6 +2054,10 @@ textarea.form-input::-webkit-resizer {
 
   .timeline-text {
     max-width: 700px;
+  }
+
+  .tags-wrapper .tag-item .tag-content .content {
+    max-width: 780px;
   }
 }
 

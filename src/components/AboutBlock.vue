@@ -89,7 +89,6 @@ const likeClick = (item) => {
         display: inline-block;
         vertical-align: middle;
         padding: 0 10px;
-        max-width: 370px;
         white-space: nowrap; /* 强制文本在一行内显示，不换行 */
         overflow: hidden; /* 隐藏超出容器宽度的部分文本 */
         text-overflow: ellipsis; /* 显示省略号 */
@@ -132,8 +131,10 @@ const likeClick = (item) => {
 }
 
 .service-item-a {
-  display: block;
+  // display: block;
   width: 100%;
+  align-items: center;
+  position: relative;
 }
 
 .service-content-box {
@@ -146,7 +147,10 @@ const likeClick = (item) => {
   font-size: 18px;
   display: inline-block;
   vertical-align: middle;
-  float: right;
+  // padding: 2px 0;
+  position: absolute;
+  right: 0;
+  top: 2px;
 }
 
 .service-item-title-text {
